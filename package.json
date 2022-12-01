@@ -1,0 +1,27 @@
+{
+  "name": "music-generator-",
+  "version": "1.0.0",
+  "description": "A full-stack app that fetches from an API that generates music",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabrina-Nawaz/music-generator-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabrina-Nawaz/music-generator-/issues"
+  },
+  "homepage": "https://github.com/Sabrina-Nawaz/music-generator-#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.26.0"
+  }
+}
