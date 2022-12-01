@@ -1,4 +1,4 @@
-const { tracks } = require("../models");
+const { Tracks } = require("../models");
 
 const tracksData = [
   {
@@ -26,6 +26,6 @@ const tracksData = [
   },
 ];
 
-const seedCategories = () => tracks.bulkCreate(tracksData);
+const seedCategories = () => Tracks.bulkCreate(tracksData);
 
 module.exports = seedCategories;
