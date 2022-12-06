@@ -4,10 +4,10 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 // Initialize Product model (table) by extending off Sequelize's Model class
-class Tracks extends Model {}
+class Track extends Model {}
 
 // set up fields and rules for Product model
-Tracks.init(
+Track.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,11 +19,11 @@ Tracks.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    artist_name: {
+    artist: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    genres: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -33,8 +33,8 @@ Tracks.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "tracks",
+    modelName: "track",
   }
 );
 
-module.exports = Tracks;
+module.exports = Track;
