@@ -1,31 +1,29 @@
-const { Tracks } = require("../models");
+const { Song } = require("../models");
 
 const tracksData = [
   {
     id: "01",
-    track_name: "I Ain't Worried",
-    artist_name: "OneRepublic",
-    genre: "Pop",
-    track_source: "https://www.youtube.com/watch?v=fMrk3qBI80k",
+    song_name: "I Ain't Worried",
+    artist: "OneRepublic",
+    album: "Top Gun: Maverick",
+    song_source: "https://www.youtube.com/watch?v=fMrk3qBI80k",
   },
   {
     id: "02",
-    track_name: "I Like You (A Happier Song)",
-    artist_name: "Post Malone",
-    genre: "R&B",
-    track_source: "https://www.youtube.com/watch?v=9cgBSVv7J0c",
+    song_name: "I Like You (A Happier Song)",
+    artist: "Post Malone",
+    album: "Twelve Carat Toothache",
+    song_source: "https://www.youtube.com/watch?v=9cgBSVv7J0c",
   },
   {
-    category_name: "Music",
-  },
-  {
-    category_name: "Hats",
-  },
-  {
-    category_name: "Shoes",
+    id: "03",
+    song_name: "Give Me A Kiss",
+    artist: "Crash Adams ",
+    album: "Give Me a Kiss - Single",
+    song_source: "https://www.youtube.com/watch?v=wNBdorKBcp8",
   },
 ];
 
-const seedCategories = () => Tracks.bulkCreate(tracksData);
+const seedCategories = () => Song.bulkCreate(tracksData);
 
 module.exports = seedCategories;

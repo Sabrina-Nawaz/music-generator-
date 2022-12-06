@@ -1,5 +1,5 @@
 // Import Models
-const Track = require("./Track");
+const Song = require("./Song");
 const Playlist = require("./Playlist");
 const User = require("./User");
 
@@ -26,8 +26,7 @@ Product.belongsToMany(Tag, {
 });
 
 module.exports = {
-  Product,
-  Category,
-  Tag,
-  ProductTag,
+  Song,
+  Playlist,
+  User,
 };
