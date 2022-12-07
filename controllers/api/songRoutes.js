@@ -24,8 +24,30 @@ router.get('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(locationData);
+    res.status(200).json(songData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// DELETE a song
+router.delete('/:id', async (req, res) => {
+  try {
+    const songData = await Song.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+
+    if (!songData) {
+      res.status(404).json({ message: 'No song located with this id!' });
+      return;
+    }
+
+    res.status(200).json(songData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
