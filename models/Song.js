@@ -31,13 +31,7 @@ Song.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    playlist_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "playlist",
-        key: "id",
-      },
-    },
+
   },
   {
     sequelize,
