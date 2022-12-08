@@ -9,13 +9,13 @@ router.get("/", async (req, res) => {
       include: [
     {
       model: Song,
-      through: /*not sure*/,
-      as: ""
+      // through: /*not sure*/,
+      // as: ""
     },
     {
       model: User,
-      through: /*not sure*/,
-      as: "";
+      // through: /*not sure*/,
+      // as: "";
     }
   ]
 });
@@ -30,7 +30,8 @@ router.get("/:id", async (req, res) => {
   try {
     const playlistData = await Playlist.findByPk(req.params.id, {
       // JOIN with User, using the Song through table
-      include: [{ model: User, through: Song, as: /*"planned_trips"*/ }],
+      include: [{ model: User, through: Song, 
+      /*as: "planned_trips"*/ }],
     });
 
     if (!playlistData) {
@@ -43,3 +44,5 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
