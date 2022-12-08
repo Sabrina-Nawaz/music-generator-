@@ -15,17 +15,10 @@ Playlist.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    song_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: "song",
-        key: "song_name",
-      },
-    },
-    song_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "song",
+        model: "user",
         key: "id",
       },
     },
