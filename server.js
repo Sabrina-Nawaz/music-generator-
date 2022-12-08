@@ -11,12 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(routes);
 
-// app.get('*', (req, res) => {
-//     console.log('hello ')
-//     Song.findAll({}).then(data => {
-//         res.json(data);
-//     })
-// })
+app.use(express.static("public"));
 
 // sync sequelize models to the database, then turn on the server
 sequelize

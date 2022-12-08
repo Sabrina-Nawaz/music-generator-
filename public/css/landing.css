@@ -1,0 +1,25 @@
+.landing-pic img{
+    height: 645px;
+}
+
+.myText{
+    text-indent: 3em;
+}
+
+h1{
+    color: #3C64B1;
+    font-size: 64px;
+}
+
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 48px;
+        text-align: center;
+    }
+
+
+    .myText{
+        text-indent: 0;
+    }
+}
