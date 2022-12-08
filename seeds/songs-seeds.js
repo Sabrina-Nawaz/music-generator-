@@ -108,6 +108,6 @@ const tracksData = [
   },
 ];
 
-const seedCategories = () => Song.bulkCreate(tracksData);
+const seedSongs = () => Song.bulkCreate(tracksData);
 
-module.exports = seedCategories;
+module.exports = seedSongs;
