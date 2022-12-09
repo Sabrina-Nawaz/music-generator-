@@ -4,11 +4,13 @@ const Playlist = require("./Playlist");
 const Song = require("./Song");
 
 // Song belongsTo Playlist
-Playlist.belongsTo(User,{
+Song.belongsToMany(User,{
+  through:Playlist,
   foreignKey:"user_id"
 })
 // Users has one Playlist
-Playlist.hasMany(Song, {
+User.belongsToMany(Song, {
+  through:Playlist,
   foreignKey: "song_id",
 });
 //PlaylistRoute /api/playlist/:id(userID)
