@@ -21,6 +21,7 @@ Playlist.init(
         model: "user",
         key: "id",
       },
+      
     },
     song_id:{
       type: DataTypes.INTEGER,
@@ -28,6 +29,7 @@ Playlist.init(
         model: "song",
         key: "id",
       },
+      
     }
   },
   {
