@@ -14,41 +14,22 @@ router.get("/", async (req, res) => {
 });
 
 // GET a single song
-router.get("/:id", async (req, res) => {
-  try {
-    const songData = await Song.findByPk(req.params.id);
+// router.get("/:id", async (req, res) => {
+//   try {
+//     const songData = await Song.findByPk(req.params.id);
 
-    if (!songData) {
-      res.status(404).json({ message: "No song located with this id!" });
-      return;
-    }
-    res.status(200).json(songData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     if (!songData) {
+//       res.status(404).json({ message: "No song located with this id!" });
+//       return;
+//     }
+//     res.status(200).json(songData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // DELETE a song by its 'id' value
-router.delete("/:id", async (req, res) => {
-  try {
-    const deletedSongData = await Song.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-
-    if (!songData) {
-      res.status(404).json({ message: "No song located with this id!" });
-      return;
-    }
-
-    res.status(200).json(deletedSongData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-module.exports = router;
 
 
 module.exports = router;
+

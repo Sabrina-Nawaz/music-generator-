@@ -4,7 +4,7 @@ const playlistRoutes = require("./playlistRoutes");
 const songRoutes = require("./songRoutes");
 
 router.use("/users", userRoutes);
-router.use("/playlistRoutes", playlistRoutes);
-router.use("/songRoutes", songRoutes);
+router.use("/playlist", playlistRoutes);
+router.use("/songs", songRoutes);
 
 module.exports = router;

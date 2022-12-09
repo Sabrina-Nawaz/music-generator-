@@ -1,23 +1,20 @@
-const { Song } = require("../models");
+const { Playlist } = require("../models");
 
-const songsData = [
+const playlistData = [
   {
-    id: "01",
-    user_id: " ",
-    artist: "OneRepublic",
-    album: "Top Gun: Maverick",
-    song_source: "https://www.youtube.com/watch?v=fMrk3qBI80k",
+    user_id: 1,
+    song_id: 1,
   },
   {
-    id: "02",
-    song_name: "I Like You (A Happier Song)",
-    artist: "Post Malone",
-    album: "Twelve Carat Toothache",
-    song_source: "https://www.youtube.com/watch?v=9cgBSVv7J0c",
+    user_id: 1,
+    song_id: 2,
   },
-  
+  {
+    user_id: 1,
+    song_id: 3,
+  },
 ];
 
-const seedSongs = () => Song.bulkCreate(songsData);
+const plSeeds = () => Playlist.bulkCreate(playlistData);
 
-module.exports = seedSongs;
+module.exports = plSeeds;

@@ -19,11 +19,7 @@ Song.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    artist: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    album: {
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -31,7 +27,6 @@ Song.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
   },
   {
     sequelize,
