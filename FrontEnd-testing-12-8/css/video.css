@@ -1,0 +1,51 @@
+.videoBox{
+    min-height: 60vh;
+}
+
+.title{
+    font-size: 48px;
+    color:#3C64B1;
+}
+
+.singer{
+    text-indent: 0.5rem;
+    color: #a1a855;
+}
+
+.videoContainer{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe{
+    border-radius:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .singer{
+        text-indent: 0;
+        font-size: 16px;
+    }
+    .icon{
+        padding: 0 10px;
+    }
+    .videoBox{
+        min-height: 50vh;
+    }
+}
