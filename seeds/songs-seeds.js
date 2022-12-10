@@ -2,9 +2,9 @@ const { Song } = require("../models");
 
 const songsData = [
   {
-    song_name: "Cozy Coffee Shop Music",
-    category: "Focus",
-    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/MYPVQccHhAQ" title="4K Cozy Coffee Shop with Smooth Piano Jazz Music for Relaxing, Studying and Working" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    song_name: "The Sound of Inner Peace",
+    category: "Meditation ",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/FTqrQsSIKR0" title="The Sound of Inner Peace 14 | 528 Hz | Relaxing Music for Meditation, Zen, Yoga & Stress Relief" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
   {
     song_name: "Good Morning Music",
@@ -12,19 +12,34 @@ const songsData = [
     song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/vSyt3D1eut8" title="GOOD MORNING MUSIC 💖 528 HZ Boost Positive Energy | Peaceful Morning Meditation Music For Waking Up" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
   {
-    song_name: "Background study music",
-    category: "Focus",
-    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/3158QbUCJcA" title="4 Hours of Background Music For Studying - Focus Music for Deep Concentration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    song_name: "Tranquility",
+    category: "Meditation ",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/FbXCjfwNORA" title="Tranquility • Deep Relaxing Music for Sleep and Meditation by Peder B. Helland" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
   {
-    song_name: "Focus and Memory music",
-    category: "Focus",
-    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/mg7netw1JuM" title="Super Intelligence: 🍎 Memory Music, Improve Memory and Concentration, Binaural Beats Focus Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    song_name: "Beautiful Relaxing Music for Stress Relief",
+    category: "Meditation ",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/2OEL4P1Rz04" title="Beautiful Relaxing Music for Stress Relief • Meditation Music, Sleep Music, Ambient Study Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
   {
-    song_name: "Seriously Smoothed Brown Noise",
-    category: "Brown Noise",
-    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/pfbdrBFKSf0" title="Seriously Smoothed Brown Noise: (1 hour) Focus, Tinnitus Relief, Meditation, Sleep" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    song_name: "Chill Lofi Vibes",
+    category: "Lofi",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/L7SWwNnsSLo" title="Chill Lofi Vibes ❄ Lofi Music | Study Music ~ beats to study / chill to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  },
+  {
+    song_name: "Lofi Hip Hop",
+    category: "Lofi",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/n61ULEU7CO0" title="Best of lofi hip hop 2021 ✨ - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  },
+  {
+    song_name: "Chill Drive Music",
+    category: "Lofi",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/25BkVBgFD9Y" title="Chill Drive - Lofi hip hop mix ~ Stress Relief, Relaxing Your Mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+  },
+  {
+    song_name: "Jazzy & Hip Hop Vibes",
+    category: "Lofi",
+    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/iEGFFyv0MH4" title="Nighttime Ramen 🍜  [jazzy beats / lofi hip hop mix]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
 ];
 
