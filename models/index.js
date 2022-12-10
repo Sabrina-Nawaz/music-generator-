@@ -10,6 +10,7 @@ User.hasMany(Playlist, {
 Playlist.hasOne(Song, {
   sourceKey: "song_id",
   foreignKey: "id",
+  constraints: false,
 });
 
 module.exports = {
