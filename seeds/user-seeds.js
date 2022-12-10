@@ -4,6 +4,10 @@ const usersData = [
     {
         "username":"LHBO19",
         "password":"password"
+},
+{
+    "username":"Sabrina",
+    "password":"password"
 }
  
 ];
