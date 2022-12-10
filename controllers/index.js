@@ -1,14 +1,10 @@
 /***
- * home / 
+ * home /
  * api  /api
  */
- const router = require("express").Router();
- const apiRoutes = require("./api");
- // import home 
+const router = require("express").Router();
+const apiRoutes = require("./api");
 
+router.use("/api", apiRoutes);
 
- // home   "/", h); 
- router.use("/api", apiRoutes);
-
-
- module.exports = router;
+module.exports = router;
