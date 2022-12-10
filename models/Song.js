@@ -24,7 +24,7 @@ Song.init(
       allowNull: false,
     },
     song_source: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(500),
       allowNull: false,
     },
   },
