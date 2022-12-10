@@ -1,12 +1,10 @@
 const router = require("express").Router();
-const { Song, Playlist, User } = require("../../models");
+const { Song } = require("../../models");
 
 // GET all songs
 router.get("/", async (req, res) => {
   try {
-    const songData = await Song.findAll({
-      // attributes: ["id", "song_name", "artist", "album", "song_source"],
-    });
+    const songData = await Song.findAll();
     res.status(200).json(songData);
   } catch (err) {
     res.status(500).json(err);
