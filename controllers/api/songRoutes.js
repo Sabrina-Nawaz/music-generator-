@@ -5,7 +5,7 @@ const { Song, Playlist, User } = require("../../models");
 router.get("/", async (req, res) => {
   try {
     const songData = await Song.findAll({
-      attributes: ["id", "song_name", "artist", "album", "song_source"],
+      // attributes: ["id", "song_name", "artist", "album", "song_source"],
     });
     res.status(200).json(songData);
   } catch (err) {
