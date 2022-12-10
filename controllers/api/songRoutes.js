@@ -31,16 +31,12 @@ router.delete("/:id", async (req, res) => {
         id: req.params.id,
       },
     });
-
     if (!deletedSongData) {
       res.status(404).json({ message: "No song located with this id!" });
       return;
     }
-
-    res.status(200).json(deletedSongData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 module.exports = router;

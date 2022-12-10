@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/userMusic.css">
 
 </head>
 <body>
     <!-- header -->
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 text-decoration-none">
-          <a href="homepage.html" class="d-flex align-items-center col-md-3 mb-2">
-            <div class="logo text-center">
-              <img src="./img/logo11.png" alt="">
-            </div>
-          </a>
+            <a href="homepage.html" class="d-flex align-items-center col-md-3 mb-2">
+              <div class="logo text-center">
+                <img src="./img/logo11.png" alt="">
+              </div>
+            </a>
     
-            <div class="d-flex align-items-center row col-md-6">
+            <div class="d-flex align-items-center justify-content-end row col-md-6">
                 <div class="col-md-8 text-center mb-4">
-                  <button type="button" class="mybtn me-2"onclick="window.location.href='userMusic.html';">My Music</button>
+                  <button type="button" class="mybtn me-2" onclick="window.location.href='homepage.html';">Home</button>
                 </div>
           
                 <div class="d-flex col-md-4 pe-3 justify-content-center mb-4 dropdown-right">
@@ -44,10 +45,10 @@
         </header>
     </div>
 
-    <div class="container">
+    <div class="container playlist">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="title">Music List</h1>
+          <h1 class="title">My Play List</h1>
         </div>
       </div>
       <div class="row">
@@ -75,7 +76,7 @@
                   <td>
                     <div id="musicBtn">
                       <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
-                      <i class="fa-solid fa-circle-plus icon" id="add"></i>
+                      <i class="fa-solid fa-circle-minus icon" id="delete"></i>
                     </div>
                   </td>
 

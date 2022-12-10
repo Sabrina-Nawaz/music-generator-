@@ -16,12 +16,17 @@ td{
 
 td p {
     color: #3C64B1;
+	font-weight: 600;
 }
 
 .title{
     text-transform: uppercase;
     color: #AAC7FF;
     font-size: 64px;
+}
+
+.table-container{
+	min-height: 60vh;
 }
 
 .user-profile {
@@ -43,18 +48,65 @@ td p {
 }
 
 .user-profile span:nth-child(2) {
-		transition: 0.25s ease;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		overflow: hidden;
-		margin-left: 1.5rem;
-		flex-shrink: 0;
+	transition: 0.25s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: 1.5rem;
+	margin-right: 1rem;
+	flex-shrink: 0;
 }
 
 .user-profile img{
 width: 50px;
+}
+
+.dropdownText ul{
+	border: #AAC7FF;
+}
+
+.dropdownText li a{
+	color: #4A90E2;
+	font-weight: 600;
+}
+
+.dropdownText li a:hover{
+	color: #3C64B1;
+}
+
+
+
+tr.clickable-row {
+	cursor: pointer;
+}
+
+.clickable-row:hover{
+	background-color: rgba(170, 199, 255, 0.3);
+
+}
+
+.duration{
+	text-indent: 2rem;
+}
+
+
+.icon{
+	color: #4A90E2;
+	padding:0 20px ;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.icon:hover{
+	color: #3C64B1;
+}
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 2rem;
+    }
 }

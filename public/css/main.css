@@ -41,4 +41,8 @@ a{
     .mybtn{
         padding: 5px 10px;
     }
+
+    .logo img{
+        height: 80px;
+    }
 }
