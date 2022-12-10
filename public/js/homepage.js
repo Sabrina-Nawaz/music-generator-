@@ -12,7 +12,7 @@ function runSong() {
     })
     .then(function (data) {
       console.log(data);
-      songTitle.textContent = data.song_name;
+      // songTitle.textContent = data.song_name;
       //   category.textContent = data.category;
       //   let videoIFrame = document.createElement("iframe");
       //   videoIFrame.setAttribute("class", "responsive-iframe");
