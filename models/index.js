@@ -3,6 +3,21 @@ const User = require("./User");
 const Playlist = require("./Playlist");
 const Song = require("./Song");
 
+User.hasMany(Playlist, {
+  foreignKey: "user_id",
+});
+
+Playlist.hasOne(Song, {
+  sourceKey: "song_id",
+  foreignKey: "id",
+});
+
+module.exports = {
+  Song,
+  Playlist,
+  User,
+};
+
 // // Song belongsTo Playlist
 // Song.belongsToMany(User,{
 //   through:Playlist,
@@ -15,16 +30,6 @@ const Song = require("./Song");
 //   onDelete:'CASCADE',
 //   foreignKey: "user_id",
 // });
-User.hasMany(Playlist,{
-  foreignKey:'user_id'
-})
-
-
-Playlist.hasOne(Song,{
-  sourceKey:'song_id',
-  foreignKey:'id'
-})
-
 
 //PlaylistRoute /api/playlist/:id(userID)
 //Playlist.findAll({where:{user_id:userID},include:[Song]})
@@ -44,9 +49,3 @@ Playlist.hasOne(Song,{
 //   song_id:1
 // }
 //]
-
-module.exports = {
-  Song,
-  Playlist,
-  User,
-};
