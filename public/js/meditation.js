@@ -2,8 +2,6 @@
 let songTitle = document.querySelector(".title");
 let category = document.querySelector(".singer");
 let videoContainer = document.querySelector(".videoContainer");
-let songList = document.querySelector(".songList");
-
 let row = $("#data");
 
 function runSong() {
@@ -12,7 +10,26 @@ function runSong() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {});
+    .then(function (data) {
+      console.log(data);
+      data.forEach((element) => {
+        row.append(`
+         <tr>      
+           <td>
+             <div>
+               <p class="song">${element.song_name}</p>
+             </div>
+           </td>
+        
+           <td>
+             <div id="musicBtn">
+               <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
+               <i class="fa-solid fa-circle-plus icon" id="add"></i>
+             </div>
+           </td>
+         </tr>`);
+      });
+    });
 }
 
 runSong();
@@ -35,13 +52,6 @@ runSong();
 //         tableRow.appendChild(tableSongCategory);
 //       });
 
-//   category.textContent = data.category;
-//   let videoIFrame = document.createElement("iframe");
-//   videoIFrame.setAttribute("class", "responsive-iframe");
-//   videoIFrame.textContent = data.song_source;
-//   videoContainer.append(videoIFrame);
-
-//Erik's example
 // function runMusicAPI() {
 //   fetch(musicAPI)
 //     .then(function (response) {
