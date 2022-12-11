@@ -11,7 +11,7 @@ function runSong() {
     })
     .then(function (data) {
       console.log(data);
-      for(let i=0; i<4; i++) {
+      for(let i=4; i<data.length; i++) {
         row.append(`
          <tr>      
            <td>
