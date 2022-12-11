@@ -105,6 +105,8 @@ tr.clickable-row {
 	color: #3C64B1;
 }
 
+
+
 @media only screen and (max-width: 600px) {
     .title{
         font-size: 2rem;

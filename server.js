@@ -1,6 +1,7 @@
 const express = require("express");
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -8,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 // turn on routes
 app.use(routes);
 //Connect to public folder
