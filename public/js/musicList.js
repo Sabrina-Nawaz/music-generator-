@@ -12,7 +12,10 @@ function runSong() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {});
+    .then(function (data) {
+      console.log(data);
+
+    });
 }
 
 runSong();
@@ -33,29 +36,6 @@ runSong();
 //   songList.appendChild(tableRow);
 //   tableRow.appendChild(tableSongName);
 //   tableRow.appendChild(tableSongCategory);
-// });
-
-//---------------JASPER's WORK-------------------
-// data.forEach(element => {
-//   row.html(`
-//   <tr>
-//     <td>
-//       <div>
-//         <p class="song">${element.song_name}</p>
-//       </div>
-//     </td>
-
-//     <td>
-//       <div id="musicBtn">
-//         <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
-//         <i class="fa-solid fa-circle-plus icon" id="add"></i>
-//       </div>
-//     </td>
-
-//     <td>
-//       <p class="duration">02:46</p>
-//     </td>
-//   </tr>`)
 // });
 
 //   category.textContent = data.category;
