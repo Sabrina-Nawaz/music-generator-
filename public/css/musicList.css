@@ -97,7 +97,6 @@ tr.clickable-row {
 .icon{
 	color: #4A90E2;
 	padding:0 20px ;
-	transition: 0.5s ease-in-out;
 	cursor: pointer;
 }
 
