@@ -1,0 +1,158 @@
+*{
+    text-transform: capitalize;
+}
+
+
+.title{
+    text-transform: uppercase;
+    color: #3C64B1;
+    font-size: 30px;
+}
+
+.user-profile {
+	display: flex;
+	align-items: center;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	color: #3C64B1;
+	transition: 0.25s ease;
+}
+
+.user-profile span:nth-child(1) {
+		display: flex;
+        font-weight: 700;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+}
+
+.user-profile span:nth-child(2) {
+	transition: 0.25s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: 1.5rem;
+	margin-right: 1rem;
+	flex-shrink: 0;
+}
+
+.user-profile img{
+width: 50px;
+}
+
+.dropdownText ul{
+	border: #AAC7FF;
+}
+
+.dropdownText li a{
+	color: #4A90E2;
+	font-weight: 600;
+}
+
+.dropdownText li a:hover{
+	color: #3C64B1;
+}
+
+.swiper {
+    padding-bottom: 50px;
+  }
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 280px;
+    height: 100%;
+}
+
+.myCard{
+    height: 256px;
+    width: 256px;
+    display: grid;
+    grid-template-rows: 226px 30px;
+    grid-template-areas: 'img' 'text';
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.myCard:hover{
+    z-index: 1;
+    background-color: rgba(157, 191, 255, 0.5);
+    animation: slide-top 1s forwards;
+}
+
+#card1.myCard{
+    width: 512px;
+}
+
+.img{
+    grid-area: img;
+    border-radius: 8px;
+}
+
+.text{
+    grid-area: text;
+    text-align: start;
+    font-weight: 600;
+}
+
+#r1.img{
+    background: url(../img/animation-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#r2.img{
+    background: url(../img/tl.jpg) no-repeat;
+    background-size: cover;
+}
+
+#r3.img{
+    background: url(../img/kpop.jpg) no-repeat;
+    background-size: cover;
+}
+
+#c1.img{
+    background: url(../img/car.png) no-repeat;
+    background-size: cover;
+}
+
+#c2.img{
+    background: url(../img/game.jpg) no-repeat;
+    background-size: cover;
+}
+
+#c3.img{
+    background: url(../img/donghua.png) no-repeat;
+    background-size: cover;
+}
+
+#c4.img{
+    background: url(../img/relax.jpeg) no-repeat;
+    background-size: cover;
+}
+
+
+
+
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .title{
+        font-size: 2rem;
+    }
+}

@@ -1,3 +1,4 @@
+//Sign up & login animation 2-30line
 let login=document.getElementById('login');
 let register=document.getElementById('register');
 let mobileLogin=document.getElementById('mLogin');

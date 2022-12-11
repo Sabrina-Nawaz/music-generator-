@@ -1,20 +1,6 @@
-
-// jQuery(document).ready(function($) {
-//     $(".clickable-row").click(function() {
-//         window.location = $(this).data("href");
-//     });
-// });
-
-
-// $(".clickable-row").hover(function(){
-//     $('.icon').show();
-// },function(){
-//     $('.icon').hide();
-// });
-
-
-jQuery(document).ready(function($) {
-    $("#play").click(function() {
-        window.location = $(this).data("href");
-    });
+//swiper init js 2-6line
+let swiper = new Swiper(".mySwiper", {
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    slidesPerColumn: 2,
 });
