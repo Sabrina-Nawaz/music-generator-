@@ -11,6 +11,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+// GET a single song
+router.get("/:id", async (req, res) => {
+  try {
+    const getSongId = await Song.findOne({
+      where: { id: req.params.id },
+    });
+    if (!getSongId) {
+      res.status(404).json({ message: "No song found with this id!" });
+      return;
+    }
+    res.status(200).json(getSongId);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // CREATE a song
 router.post("/", async (req, res) => {
   try {
