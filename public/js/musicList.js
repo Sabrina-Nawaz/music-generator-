@@ -15,25 +15,42 @@ function runSong() {
     .then(function (data) {
       console.log(data);
       data.forEach(element => {
-        row.html(`
-        <tr>      
-          <td>
-            <div>
-              <p class="song">${element.song_name}</p>
-            </div>
-          </td>
+        row.append(`
+         <tr>      
+           <td>
+             <div>
+               <p class="song">${element.song_name}</p>
+             </div>
+           </td>
         
-          <td>
-            <div id="musicBtn">
-              <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
-              <i class="fa-solid fa-circle-plus icon" id="add"></i>
-            </div>
-          </td>
+           <td>
+             <div id="musicBtn">
+               <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
+               <i class="fa-solid fa-circle-plus icon" id="add"></i>
+             </div>
+           </td>
         
-          <td>
-            <p class="duration">02:46</p>
-          </td>
-        </tr>`)
+
+         </tr>`);
+        // row.html(`
+        // <tr>      
+        //   <td>
+        //     <div>
+        //       <p class="song">${element.song_name}</p>
+        //     </div>
+        //   </td>
+        
+        //   <td>
+        //     <div id="musicBtn">
+        //       <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
+        //       <i class="fa-solid fa-circle-plus icon" id="add"></i>
+        //     </div>
+        //   </td>
+        
+        //   <td>
+        //     <p class="duration">02:46</p>
+        //   </td>
+        // </tr>`)
       });
 
       // songTitle.textContent = data.song_name;
