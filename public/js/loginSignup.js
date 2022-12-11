@@ -32,6 +32,10 @@ mobileLogin.addEventListener('click',()=>{
 })
 
 loginButton.addEventListener('click',()=>{
+
+    fetch('http://localhost:3001/user')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
     //get the inputs
     //you re going to call the api and send the inputs
     // you will receive the user data and the logged in value if everyrthing is succesful
