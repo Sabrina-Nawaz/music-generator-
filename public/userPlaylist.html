@@ -16,7 +16,7 @@
     <!-- header -->
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 text-decoration-none">
-            <a href="musicList.html" class="d-flex align-items-center col-md-3 mb-2">
+            <a href="/homepage" class="d-flex align-items-center col-md-3 mb-2">
               <div class="logo text-center">
                 <img src="./img/logo11.png" alt="">
               </div>
@@ -59,47 +59,26 @@
                 <tr>
                   <th>Song</th>
                   <th></th>
-                  <th>Singer</th>
-                  <th>Album</th>
-                  <th>Duration</th>
                 </tr>
               </thead>
               
               <tbody>
-                <tr>
-                  <td>
-                      <div>
-                        <p class="song">Give Me A Kiss</p>
-                      </div>
-                  </td>
 
-                  <td>
-                    <div id="musicBtn">
-                      <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
-                      <i class="fa-solid fa-circle-minus icon" id="delete"></i>
+                <tr class="d-flex col-12">      
+                  <td class="col-8 d-flex align-items-center">
+                    <div>
+                      <p class="song">Give me a kiss</p>
                     </div>
                   </td>
-
-                  <td>
-                    <div>
-                      <p class="singer">Crash Adams</p>
-                    </div>                
+               
+                  <td class="col-4 d-flex justify-content-center">
+                    <div class="musicBtn">
+                      <i class="fa-solid fa-play icon play" data-href='videoPage.html'></i>
+                      <i class="fa-solid fa-circle-plus icon add"></i>
+                    </div>
                   </td>
-
-                  <td>
-                    <p class="album">Give Me a Kiss - Single</p>
-                  </td>
-                    
-                  <td>
-                    <p class="duration">02:46</p>
-                  </td>
-
-
-                  </td>
-  
+               
                 </tr>
-
-                
 
               </tbody>
             </table>

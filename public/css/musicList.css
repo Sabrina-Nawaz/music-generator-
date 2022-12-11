@@ -109,6 +109,14 @@ tr.clickable-row {
 
 @media only screen and (max-width: 600px) {
     .title{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
+
+	.song{
+		font-size: 18px;
+	}
+
+	.icon{
+		padding: 0 10px;
+	}
 }
