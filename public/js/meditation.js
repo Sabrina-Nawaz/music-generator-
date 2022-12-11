@@ -14,12 +14,12 @@ function runSong() {
     })
     .then(function (data) {
       console.log(data);
-      data.forEach(element => {
+      for(let i=0; i<4; i++) {
         row.append(`
          <tr>      
            <td>
              <div>
-               <p class="song">${element.song_name}</p>
+               <p class="song">${data[i].song_name}</p>
              </div>
            </td>
         
@@ -30,36 +30,12 @@ function runSong() {
              </div>
            </td>
         
-
          </tr>`);
-        // row.html(`
-        // <tr>      
-        //   <td>
-        //     <div>
-        //       <p class="song">${element.song_name}</p>
-        //     </div>
-        //   </td>
-        
-        //   <td>
-        //     <div id="musicBtn">
-        //       <i class="fa-solid fa-play icon" id="play" data-href='videoPage.html'></i>
-        //       <i class="fa-solid fa-circle-plus icon" id="add"></i>
-        //     </div>
-        //   </td>
-        
-        //   <td>
-        //     <p class="duration">02:46</p>
-        //   </td>
-        // </tr>`)
-      });
 
-      // songTitle.textContent = data.song_name;
-      //   category.textContent = data.category;
-      //   let videoIFrame = document.createElement("iframe");
-      //   videoIFrame.setAttribute("class", "responsive-iframe");
-      //   videoIFrame.textContent = data.song_source;
-      //   videoContainer.append(videoIFrame);
+      }
     });
+
+
 }
 
 runSong();

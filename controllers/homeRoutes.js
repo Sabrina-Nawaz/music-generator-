@@ -8,6 +8,6 @@ router.get("/login", (req, res) => res.sendFile(path.join(__dirname, "../public/
 router.get("/homepage", (req, res) => res.sendFile(path.join(__dirname, "../public/homepage.html")));
 router.get("/video", (req, res) => res.sendFile(path.join(__dirname, "../public/videoPage.html")));
 router.get("/user", (req, res) => res.sendFile(path.join(__dirname, "../public/userPlaylist.html")));
-router.get("/music", (req, res) => res.sendFile(path.join(__dirname, "../public/musicList.html")));
+router.get("/music", (req, res) => res.sendFile(path.join(__dirname, "../public/meditation.html")));
 
 module.exports = router;
