@@ -12,31 +12,28 @@ function runSong() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {
-      console.log(data);
-
-    });
+    .then(function (data) {});
 }
 
 runSong();
 
 //---------------Gareth's Work-------------------
 // console.log(data);
-// songs = [0, 1, 2, 3, 4, 5, 6, 7];
-// songs.forEach(function (i) {
-//   let tableRow = document.createElement("tr");
-//   let tableSongName = document.createElement("td");
-//   let tableSongCategory = document.createElement("td");
-//   tableSongName.textContent = data[i].song_name;
-//   tableSongCategory.textContent = data[i].category;
-//   tableSongName.setAttribute("class", "tableSongName");
-//   tableSongCategory.setAttribute("class", "tableSongCategory");
-//   // document.getElementsByClassName("tableSongName").style.fontWeight = "500";
-//   // document.getElementsByClassName("tableSongCategory").style.fontWeight = 900;
-//   songList.appendChild(tableRow);
-//   tableRow.appendChild(tableSongName);
-//   tableRow.appendChild(tableSongCategory);
-// });
+//       songs = [0, 1, 2, 3, 4, 5, 6, 7];
+//       songs.forEach(function (i) {
+//         let tableRow = document.createElement("tr");
+//         let tableSongName = document.createElement("td");
+//         let tableSongCategory = document.createElement("td");
+//         tableSongName.textContent = data[i].song_name;
+//         tableSongCategory.textContent = data[i].category;
+//         tableSongName.setAttribute("class", "tableSongName");
+//         tableSongCategory.setAttribute("class", "tableSongCategory");
+//         // document.getElementsByClassName("tableSongName").style.fontWeight = "500";
+//         // document.getElementsByClassName("tableSongCategory").style.fontWeight = 900;
+//         songList.appendChild(tableRow);
+//         tableRow.appendChild(tableSongName);
+//         tableRow.appendChild(tableSongCategory);
+//       });
 
 //   category.textContent = data.category;
 //   let videoIFrame = document.createElement("iframe");
