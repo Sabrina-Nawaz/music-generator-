@@ -23,7 +23,7 @@
     
             <div class="d-flex align-items-center row col-md-6">
                 <div class="col-md-8 text-center mb-4">
-                  <button type="button" class="mybtn me-2"onclick="window.location.href='userMusic.html';">My Music</button>
+                  <button type="button" class="mybtn me-2 btnFunction" data-href="/music">My Music</button>
                 </div>
           
                 <div class="d-flex col-md-4 pe-3 justify-content-center mb-4 dropdown-right">
@@ -34,7 +34,7 @@
                     </span>
                     <ul class="dropdown-menu dropdownText">
                       <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li><a class="dropdown-item" onclick="window.location.href='index.html';">Log Out</a></li>
+                      <li><a class="dropdown-item btnFunction" data-href="/">Log Out</a></li>
                     </ul>
                   </button>
                 </div>
@@ -65,7 +65,7 @@
               </thead>
               
               <tbody>
-                <tr class='clickable-row' data-href='index.html'>
+                <tr>
                   <td>
                       <div>
                         <p class="song">Give Me A Kiss</p>
@@ -133,6 +133,8 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="./js/main.js"></script>
 <script src="./js/musicList.js"></script>
+
 
 </html>
