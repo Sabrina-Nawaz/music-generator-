@@ -1,5 +1,6 @@
 //Sign up & login animation 2-30line
 let login=document.getElementById('login');
+let loginButton=document.querySelector("#loginBtn")
 let register=document.getElementById('register');
 let mobileLogin=document.getElementById('mLogin');
 let mobileRegister=document.getElementById('mReg');
@@ -17,6 +18,7 @@ login.addEventListener('click',()=>{
     form_box.style.transform='translateX(0%)';
     register_box.classList.add('hidden');
     login_box.classList.remove('hidden');
+  
 })
 
 mobileRegister.addEventListener('click',()=>{
@@ -27,4 +29,13 @@ mobileRegister.addEventListener('click',()=>{
 mobileLogin.addEventListener('click',()=>{
     register_box.classList.add('hidden');
     login_box.classList.remove('hidden');
+})
+
+loginButton.addEventListener('click',()=>{
+    //get the inputs
+    //you re going to call the api and send the inputs
+    // you will receive the user data and the logged in value if everyrthing is succesful
+    //save that into the local storage
+    //make all your pages that need to show or hide values after the auth look for the values in local storage
+
 })
