@@ -20,10 +20,10 @@
 }
 
 .user-profile span:nth-child(1) {
-		display: flex;
-        font-weight: 700;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+	display: flex;
+    font-weight: 700;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 
 }
 
@@ -42,7 +42,7 @@
 }
 
 .user-profile img{
-width: 50px;
+    width: 50px;
 }
 
 .dropdownText ul{
@@ -59,7 +59,7 @@ width: 50px;
 }
 
 .swiper {
-    padding-bottom: 50px;
+    padding: 20px 0;
   }
 
 .swiper-slide {
@@ -137,17 +137,14 @@ width: 50px;
     background-size: cover;
 }
 
-
-
-
 @keyframes slide-top {
     0% {
       -webkit-transform: translateY(0);
               transform: translateY(0);
     }
     100% {
-      -webkit-transform: translateY(20px);
-              transform: translateY(20px);
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
     }
   }
 
