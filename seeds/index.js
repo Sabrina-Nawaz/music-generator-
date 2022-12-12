@@ -1,6 +1,6 @@
 const seedSongs = require("./songs-seeds");
-const userSeeds=require("./user-seeds")
-const plSeeds=require("./playlist-seeds")
+const userSeeds = require("./user-seeds");
+const plSeeds = require("./playlist-seeds");
 const sequelize = require("../config/connection");
 
 const seedAll = async () => {
