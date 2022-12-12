@@ -21,7 +21,7 @@ function getSongList() {
      
         <td class="col-4 d-flex justify-content-center">
           <div class="musicBtn">
-            <i class="fa-solid fa-play icon play" data-href='videoPage.html'></i>
+          <a href="/videoPage/${data[i].id}"> <i class="fa-solid fa-play icon play"></i></a>
             <i class="fa-solid fa-circle-plus icon add"></i>
           </div>
         </td>
@@ -35,21 +35,20 @@ function getSongList() {
 //home request is going to serve the videoPage.html
 
 //Function to link each song to their specific music video
-function getSong(id) {
-  location.href = `/videoPage/${id}`;
-}
+// function getSong(id) {
+//   location.href = `/videoPage/${id}`;
+// }
 
-//Event Listener for clicking on the song
-playButton.addEventListener("click", getSong);
+// const getSong = (id) =>
+//   fetch(`/videoPage${id}`, {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
 
-//Option 2
-const getSong = (id) =>
-  fetch(`/videoPage${id}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+// //Event Listener for clicking on the song
+// playButton.addEventListener("click", getSong);
 
 //Invoke Functions
 getSongList();

@@ -98,6 +98,26 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/videoPage.js"></script>
+  <!-- <script>
+    console.log("ready to fetch individual song");
+
+    async function getSong() {
+      const url = document.location.href;
+      const id = url.split("http://localhost:3001/videoPage/")[1];
+
+      fetch(`http://localhost:3001/api/songs/${id}`)
+        .then(function (response) {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data, "song got!");
+          //use the data to put it in the html to show the individual song information
+        });
+    }
+
+    getSong();
+  </script> -->
 
   <!-- new script that will take the url number and make an api request to the song table to get the song data -->
 </html>

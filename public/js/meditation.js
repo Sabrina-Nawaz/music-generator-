@@ -20,8 +20,9 @@ function runSong() {
      
         <td class="col-4 d-flex justify-content-center">
           <div class="musicBtn">
-            <i class="fa-solid fa-play icon play" data-href='videoPage.html'></i>
+          <a href="/videoPage/${data[i].id}"> <i class="fa-solid fa-play icon play"></i></a>
             <i class="fa-solid fa-circle-plus icon add"></i>
+          </div>
           </div>
         </td>
      
