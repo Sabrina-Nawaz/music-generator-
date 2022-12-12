@@ -7,8 +7,10 @@ async function getSong() {
       return response.json();
     })
     .then((data) => {
-      console.log(data, "song got!");
       //use the data to put it in the html to show the individual song information
+      console.log(data);
+      songName.text(data.song_name);
+      videoContainer.append(data.song_source);
     });
 }
 
