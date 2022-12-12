@@ -44,7 +44,6 @@ td p {
         font-weight: 700;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-
 }
 
 .user-profile span:nth-child(2) {
@@ -62,7 +61,7 @@ td p {
 }
 
 .user-profile img{
-width: 50px;
+	width: 50px;
 }
 
 .dropdownText ul{
@@ -78,26 +77,9 @@ width: 50px;
 	color: #3C64B1;
 }
 
-
-
-tr.clickable-row {
-	cursor: pointer;
-}
-
-.clickable-row:hover{
-	background-color: rgba(170, 199, 255, 0.3);
-
-}
-
-.duration{
-	text-indent: 2rem;
-}
-
-
 .icon{
 	color: #4A90E2;
 	padding:0 20px ;
-	transition: 0.5s ease-in-out;
 	cursor: pointer;
 }
 
@@ -109,6 +91,14 @@ tr.clickable-row {
 
 @media only screen and (max-width: 600px) {
     .title{
-        font-size: 2rem;
+        font-size: 28px;
     }
+
+	.song{
+		font-size: 18px;
+	}
+
+	.icon{
+		padding: 0 10px;
+	}
 }
