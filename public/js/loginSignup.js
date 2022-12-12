@@ -33,7 +33,7 @@ mobileLogin.addEventListener('click',()=>{
 
 loginButton.addEventListener('click',()=>{
 
-    fetch('http://localhost:3001/user')
+    fetch('http://localhost:3001/api/users/login')
   .then((response) => response.json())
   .then((data) => console.log(data));
     //get the inputs
