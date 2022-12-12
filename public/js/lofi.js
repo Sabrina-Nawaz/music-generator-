@@ -1,7 +1,8 @@
 // Variable Declaration
 let row = $("#data");
+let playButton = document.querySelector(".play");
 
-function runSong() {
+function getSongList() {
   let musicAPI = "http://localhost:3001/api/songs";
   fetch(musicAPI)
     .then(function (response) {
@@ -30,7 +31,25 @@ function runSong() {
     });
 }
 
-//the buttons are going to be href that will send a home route request /videopage/1
+//the buttons are going to be href that will send a home route request /videoPage/1
 //home request is going to serve the videoPage.html
 
-runSong();
+//Function to link each song to their specific music video
+function getSong(id) {
+  location.href = `/videoPage/${id}`;
+}
+
+//Event Listener for clicking on the song
+playButton.addEventListener("click", getSong);
+
+//Option 2
+const getSong = (id) =>
+  fetch(`/videoPage${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+//Invoke Functions
+getSongList();
