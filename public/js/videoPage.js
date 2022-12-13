@@ -1,8 +1,8 @@
 async function getSong() {
   const url = document.location.href;
-  const id = url.split("http://localhost:3001/videoPage/")[1];
+  const id = url.split("https://bc-music-generator.herokuapp.com/")[1];
 
-  fetch(`http://localhost:3001/api/songs/${id}`)
+  fetch(`https://bc-music-generator.herokuapp.com/${id}`)
     .then(function (response) {
       return response.json();
     })

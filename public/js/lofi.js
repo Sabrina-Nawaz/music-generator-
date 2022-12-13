@@ -3,7 +3,7 @@ let row = $("#data");
 let playButton = document.querySelector(".play");
 
 function getSongList() {
-  let musicAPI = "http://localhost:3001/api/songs";
+  let musicAPI = "https://bc-music-generator.herokuapp.com/api/songs";
   fetch(musicAPI)
     .then(function (response) {
       return response.json();
