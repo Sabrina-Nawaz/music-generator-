@@ -6,7 +6,7 @@
 .title{
     text-transform: uppercase;
     color: #3C64B1;
-    font-size: 30px;
+    font-weight: 600;
 }
 
 .user-profile {
@@ -150,6 +150,6 @@
 
 @media only screen and (max-width: 600px) {
     .title{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }

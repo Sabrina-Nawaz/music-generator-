@@ -2,7 +2,7 @@ const row = $("#data");
 const deleteBtn =$('#delete')
 
 function runSong() {
-    let playlistAPI = "api/playlist/1";
+    let playlistAPI = "api/playlist/3";
     fetch(playlistAPI)
       .then(function (response) {
         return response.json();
@@ -10,8 +10,7 @@ function runSong() {
       .then(function (data) {
         console.log(data);
         data.forEach(element => {
-            for(let i=0 ; i < element.playlists.length; i++){            
-
+            for(let i=0 ; i < element.playlists.length; i++){           
                 row.append(`
                 <tr class="d-flex col-12">      
                 <td class="col-8 d-flex align-items-center">
@@ -30,8 +29,10 @@ function runSong() {
              
               </tr>`);
 
-              deleteBtn.on('click', function () {
-                fetch(`/api/playlist/ ${element.playlists[i].id}`, {
+              let songId=element.playlists[i].id
+
+                deleteBtn.on('click', function () {
+                fetch(`/api/playlist/${songId}`, {
                   method: 'DELETE',
                 }).then(response => {console.log(response.status); })
               });
