@@ -1,6 +1,7 @@
 //Sign up & login animation 2-30line
 let login = document.getElementById("login");
-let loginButton = document.querySelector("#loginBtn");
+let loginButton = document.querySelector("#LoginBtn");
+let singUpButton = document.querySelector("#SingUpBtn");
 let register = document.getElementById("register");
 let mobileLogin = document.getElementById("mLogin");
 let mobileRegister = document.getElementById("mReg");
@@ -32,13 +33,80 @@ mobileLogin.addEventListener("click", () => {
 
 loginButton.addEventListener('click',()=>{
 
-    fetch('http://localhost:3001/api/users/login')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-    //get the inputs
-    //you re going to call the api and send the inputs
-    // you will receive the user data and the logged in value if everyrthing is succesful
-    //save that into the local storage
-    //make all your pages that need to show or hide values after the auth look for the values in local storage
+  const username = document.getElementById('login_username').value;
+  const password = document.getElementById('login_password').value;
 
+  if(username === '') {
+    alert('The username is required.');
+    return;
+  }
+
+  if(password === '') {
+    alert('The password is required.');
+    return;
+  }
+
+  const data = {username, password}
+
+  fetch('/api/users/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  })
+  .then((response) => response.json())
+  .then((data) =>  {
+    if(data.loggedIn) {
+      localStorage.setItem('USER_DATA', JSON.stringify(data));
+      window.location.href = '/homepage'
+    } else {
+      alert('Username or password is incorect.')
+    }
+  });
+})
+
+
+singUpButton.addEventListener('click',()=>{
+
+  
+  const username = document.getElementById('singup_username').value;
+  const email = document.getElementById('singup_email').value;
+  const password = document.getElementById('singup_password').value;
+  const repassword = document.getElementById('singup_repassword').value;
+
+  if(username === '') {
+    alert('The username is required.');
+    return;
+  }
+
+  if(email === '') {
+    alert('The email is required.');
+    return;
+  }
+
+  if(password === '') {
+    alert('The password is required.');
+    return;
+  }
+
+  if(password != repassword) {
+    alert('The password is not the same');
+    return;
+  }
+
+  const data = {username, email, password }
+
+  fetch('/api/users/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  })
+  .then((response) => response.json())
+  .then((data) =>  {
+    if(data.loggedIn) {
+      localStorage.setItem('USER_DATA', JSON.stringify(data));
+      window.location.href = '/homepage'
+    } else {
+      alert(data.errors[0].message)
+    }
+  });
 })

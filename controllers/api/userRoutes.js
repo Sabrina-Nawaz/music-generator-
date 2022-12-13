@@ -19,8 +19,10 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
-    res.status(200).json({user: userData,loggedIn:true, message: 'You are now logged in' });
+    console.log({userData})
+    res.status(200).json({user: userData, loggedIn:true, message: 'You are now logged in' });
   } catch (err) {
+    console.error(err);
     res.status(400).json(err);
   }
 });
@@ -28,28 +30,34 @@ router.post('/', async (req, res) => {
 // POST user login
 router.post('/login', async (req, res) => {
   try {
+
     // First we find one user record with an email address that matches the one provided by the user logging in
     const userData = await User.findOne({ where: { username: req.body.username } });
-    // If an account with that email address doesn't exist, the user will receive an error message
-    if (!userData) {
-      res
-        .status(400)
-        .json({ message: 'Email or password not found, please try again' });
-      return;
+   
+    if ( !userData ) {
+      return res.status(400)
+                .json({ message: 'Email or password not found, please try again' });
     }
+
     // If the user does exist, we will use the checkPassword() instance method to compare the user's input to the password stored in the record
     const validPassword = await userData.checkPassword(req.body.password);
-    // If checkPassword() evaluates as false, the user will receive an error message
+
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
-      return;
+      return res.status(400)
+                .json({ message: 'Incorrect email or password, please try again' });
     }
+
     // If checkPassword() evaluates as true, the user will be logged in
-    res.json({ user: userData,loggedIn:true, message: 'You are now logged in' });
+    
+    const responseData = { user: userData, loggedIn:true, message: 'You are now logged in'};
+
+    //req.session.user = responseData;
+
+    return res.json(responseData);
+
   } catch (err) {
-    res.status(400).json(err);
+    console.error(err);
+    return res.status(400).json(err);
   }
 });
 

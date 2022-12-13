@@ -3,13 +3,13 @@ const { Model, DataTypes } = require("sequelize");
 const { beforeCreate } = require('../config/connection');
 // import our database connection from config.js
 const sequelize = require("../config/connection");
-
+const bcrypt = require('bcrypt');
 // Initialize Product model (table) by extending off Sequelize's Model class
 
 
 class User extends Model {
   checkPassword(loginPw) {
-      return  bcrypt.compareSync(loginPw, this.password);
+    return  bcrypt.compareSync(loginPw, this.password);
   }
 }  
 
