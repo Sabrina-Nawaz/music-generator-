@@ -2,7 +2,7 @@ const row = $("#data");
 const deleteBtn =$('#delete')
 
 function runSong() {
-    let playlistAPI = "api/playlist/3";
+    let playlistAPI = "api/playlist/1";
     fetch(playlistAPI)
       .then(function (response) {
         return response.json();
