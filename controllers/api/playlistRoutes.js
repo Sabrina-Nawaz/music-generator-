@@ -38,6 +38,24 @@ router.post("/", async (req, res) => {
   }
 });
 
+// delete a row for playlist
+router.delete("/:id", async (req, res) => {
+  try {
+    const deletedPlaylistRow = await Playlist.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!deletedPlaylistRow) {
+      res
+        .status(404)
+        .json({ message: "Song with this id not on the playlist!" });
+      return;
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // GET a single playlist (may need to use findOne?)
 // router.get("/:id", async (req, res) => {

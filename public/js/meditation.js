@@ -2,7 +2,7 @@
 let row = $("#data");
 
 function runSong() {
-  let musicAPI = "http://localhost:3001/api/songs";
+  let musicAPI = "https://bc-music-generator.herokuapp.com/api/songs";
   fetch(musicAPI)
     .then(function (response) {
       return response.json();
@@ -20,8 +20,9 @@ function runSong() {
      
         <td class="col-4 d-flex justify-content-center">
           <div class="musicBtn">
-            <i class="fa-solid fa-play icon play" data-href='videoPage.html'></i>
+          <a href="/videoPage/${data[i].id}"> <i class="fa-solid fa-play icon play"></i></a>
             <i class="fa-solid fa-circle-plus icon add"></i>
+          </div>
           </div>
         </td>
      

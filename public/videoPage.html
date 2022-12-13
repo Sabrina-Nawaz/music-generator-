@@ -11,9 +11,9 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/musicList.css" />
-    <link rel="stylesheet" href="./css/video.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/musicList.css" />
+    <link rel="stylesheet" href="/css/video.css" />
   </head>
   <body>
     <!-- header -->
@@ -22,7 +22,7 @@
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 text-decoration-none">
         <a href="/homepage" class="d-flex align-items-center col-md-3 mb-2">
           <div class="logo text-center">
-            <img src="./img/logo11.png" alt="" />
+            <img src="/img/logo11.png" alt="" />
           </div>
         </a>
 
@@ -35,7 +35,7 @@
               aria-expanded="false">
               <span id="label-username">-</span>
               <span>
-                <img src="./img/user.png" alt="" />
+                <img src="/img/user.png" alt="Profile-image" />
               </span>
               <ul class="dropdown-menu dropdownText">
                 <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -49,22 +49,16 @@
 
     <div class="container videoBox">
       <div class="d-flex justify-content-between align-items-center">
-        <h1 class="title">Give Me A Kiss</h1>
-        <div>
+        <div class="col-8 d-flex align-items-center">        
+          <h1 class="title" id="song"></h1>
+        </div>
+
+        <div class="col-4 d-flex justify-content-end">
           <i class="fa-solid fa-circle-plus fa-xl icon" id="add"></i>
           <i class="fa-solid fa-heart fa-xl icon"></i>
         </div>
       </div>
-      <h5 class="singer">Crash Adams</h5>
-      <div class="videoContainer">
-        <iframe
-          class="responsive-iframe"
-          src="https://www.youtube.com/embed/wNBdorKBcp8"
-          title="Crash Adams - Give Me A Kiss (Official Lyric Video)"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
+      <div class="videoContainer"></div>
     </div>
 
     <!-- footer -->
@@ -97,7 +91,27 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/videoPage.js"></script>
+  <!-- <script>
+    console.log("ready to fetch individual song");
+
+    async function getSong() {
+      const url = document.location.href;
+      const id = url.split("http://localhost:3001/videoPage/")[1];
+
+      fetch(`http://localhost:3001/api/songs/${id}`)
+        .then(function (response) {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data, "song got!");
+          //use the data to put it in the html to show the individual song information
+        });
+    }
+
+    getSong();
+  </script> -->
 
   <!-- new script that will take the url number and make an api request to the song table to get the song data -->
 </html>

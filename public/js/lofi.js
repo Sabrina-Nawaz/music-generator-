@@ -3,7 +3,7 @@ let row = $("#data");
 let playButton = document.querySelector(".play");
 
 function getSongList() {
-  let musicAPI = "http://localhost:3001/api/songs";
+  let musicAPI = "https://bc-music-generator.herokuapp.com/api/songs";
   fetch(musicAPI)
     .then(function (response) {
       return response.json();
@@ -21,7 +21,7 @@ function getSongList() {
      
         <td class="col-4 d-flex justify-content-center">
           <div class="musicBtn">
-            <i class="fa-solid fa-play icon play" data-href='videoPage.html'></i>
+          <a href="/videoPage/${data[i].id}"> <i class="fa-solid fa-play icon play"></i></a>
             <i class="fa-solid fa-circle-plus icon add"></i>
           </div>
         </td>
@@ -33,23 +33,6 @@ function getSongList() {
 
 //the buttons are going to be href that will send a home route request /videoPage/1
 //home request is going to serve the videoPage.html
-
-//Function to link each song to their specific music video
-function getSong(id) {
-  location.href = `/videoPage/${id}`;
-}
-
-//Event Listener for clicking on the song
-playButton.addEventListener("click", getSong);
-
-//Option 2
-const getSong = (id) =>
-  fetch(`/videoPage${id}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
 
 //Invoke Functions
 getSongList();
