@@ -2,11 +2,6 @@
   min-height: 60vh;
 }
 
-.singer {
-  text-indent: 0.5rem;
-  color: #a1a855;
-}
-
 .videoContainer {
   position: relative;
   overflow: hidden;
