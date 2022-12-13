@@ -2,11 +2,13 @@ function getSong() {
   const url = document.location.href;
   const id = url.split("https://bc-music-generator.herokuapp.com/api/videoPage/")[1];
 
-  fetch(`https://bc-music-generator.herokuapp.com/api/videoPage/${id}`)
+  fetch(`https://bc-music-generator.herokuapp.com/api/songs/${id}`)
     .then(function (response) {
       return response.json();
     })
     .then((data) => {
+      console.log(url);
+      console.log(id);
       const songName = $("#song");
       const videoContainer = $(".videoContainer");
       console.log(data);
