@@ -4,13 +4,6 @@ jQuery(document).ready(function ($) {
   });
 });
 
-jQuery(document).ready(function ($) {
-  $("#play").click(function () {
-    window.location = $(this).data("href");
-  });
-});
-
-
 const excludePages = [
   '/login',
   '/',

@@ -2,7 +2,7 @@
 let row = $("#data");
 
 function runSong() {
-  let musicAPI = "https://bc-music-generator.herokuapp.com/api/songs";
+  let musicAPI = "/api/songs";
   fetch(musicAPI)
     .then(function (response) {
       return response.json();
