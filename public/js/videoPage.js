@@ -1,4 +1,6 @@
-async function getSong() {
+
+
+ function getSong() {
   const url = document.location.href;
   const id = url.split("http://localhost:3001/videoPage/")[1];
 
@@ -7,7 +9,8 @@ async function getSong() {
       return response.json();
     })
     .then((data) => {
-      //use the data to put it in the html to show the individual song information
+      const songName = $('#song');
+      const videoContainer=$('.videoContainer');
       console.log(data);
       songName.text(data.song_name);
       videoContainer.append(data.song_source);
