@@ -10,7 +10,7 @@ body{
     border-bottom: 1px solid rgba(255,255,255,0.3);
     border-right: 1px solid rgba(255,255,255,0.3);
     backdrop-filter: blur(10px);
-    background: rgba(27, 25, 25, 0.2);
+    background: rgba(117, 108, 108, 0.2);
     border-radius: 18px;
 }
 
@@ -19,4 +19,8 @@ body{
     color: #4A90E2;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .playlist{
+        max-width: 96%;
+    }
+}
