@@ -41,11 +41,6 @@ const songsData = [
     category: "Lofi",
     song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/iEGFFyv0MH4?controls=1" title="Nighttime Ramen 🍜  [jazzy beats / lofi hip hop mix]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
   },
-  {
-    song_name: "Best EDM Remixes, Trap, Dubstep, House",
-    category: "Game",
-    song_source: `<iframe class="responsive-iframe" src="https://www.youtube.com/embed/yGvUb0g3hjY" title="Gaming music 2022 🎧 Best EDM Remixes, Trap, Dubstep, House 🎶 EDM Gaming Music 2022 Mix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
-  },
 ];
 
 const seedSongs = () => Song.bulkCreate(songsData);
