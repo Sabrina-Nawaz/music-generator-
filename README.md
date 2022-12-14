@@ -8,6 +8,7 @@ The Bootcamp Music webpage allows user to enter their username, email address, a
   * [Demo](#demo)  
   * [Deployment](#deployment)
   * [Questions](#questions)
+  * [Packages](#packages)
 
     ***
 
@@ -34,6 +35,16 @@ User playlist
 
 
 ![slack](./Assets/BCmusic.jpg)
+
+## Packages
+
+- [Figma - Wireframe](https://www.figma.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/knowledge)
+- [JQuerey](https://jquery.com/)
+- [BootStrap Framework](https://getbootstrap.com/)
+- [Swiper Framework - CSS/JS](https://swiperjs.com/)
+
 
 ## Deployment
 
