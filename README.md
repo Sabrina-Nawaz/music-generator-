@@ -39,8 +39,8 @@ User playlist
 
 A live demo of this application can be found here: 
  
-Heroku: https://bc-music-generator.herokuapp.com/
-Local Host: http://localhost:3001
+- [Heroku:] https://bc-music-generator.herokuapp.com/
+- [Local Host:] http://localhost:3001
 
 
 ## Installation
@@ -56,8 +56,8 @@ https://github.com/Sabrina-Nawaz/music-generator-.git
 
   If you have any questions about the project you can reach out to me through my GitHub found below:
 
-*[Sabrina-Nawaz](https://github.com/Sabrina-Nawaz)
-*[Gareth Kwan](https://github.com/Gareth-Kwan)
-*[Jasper Cheng](https://github.com/Hpyorange)
-*[Andres Chaux](https://github.com/andres192x)
-*[Jessica Osorio](https://github.com/osorioj88) 
+- [Sabrina-Nawaz](https://github.com/Sabrina-Nawaz)
+- [Gareth Kwan](https://github.com/Gareth-Kwan)
+- [Jasper Cheng](https://github.com/Hpyorange)
+- [Andres Chaux](https://github.com/andres192x)
+- [Jessica Osorio](https://github.com/osorioj88) 
