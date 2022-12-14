@@ -1,8 +1,8 @@
-# music-generator-
+# MUSIC-GENERATOR-
 A full-stack app that fetches from an API that generates music
 
 ## Description
-The webpage allows user to enter their username, email address, and password to create login. Login allows access to predetermined homepage where users can access categories of music and play videos. Each video has the option for user to save songs into their playlist on local storage. User can fetch playlist data based on the stored values under My Music page. Upon reviewing playlist the user is able to play or delete as desired.
+The Bootcamp Music webpage allows user to enter their username, email address, and password to create login. Login allows access to predetermined homepage where users can access categories of music and play videos. Each video has the option for user to save songs into their playlist on local storage. User can fetch playlist data based on the stored values under My Music page. Upon reviewing playlist the user is able to play or delete as desired.
 
 ## Table of Contents
   * [Demo](#demo)  
@@ -29,7 +29,9 @@ Music list
 User playlist
 ![image](./Assets/user%20playlist.jpg)
 ​
+
 ![routes](./Assets/postman.jpg)
+
 
 ![slack](./Assets/BCmusic.jpg)
 
@@ -54,8 +56,8 @@ https://github.com/Sabrina-Nawaz/music-generator-.git
 
   If you have any questions about the project you can reach out to me through my GitHub found below:
 
-[Sabrina-Nawaz](https://github.com/Sabrina-Nawaz)
-[Gareth Kwan](https://github.com/Gareth-Kwan)
-[Jasper Cheng](https://github.com/Hpyorange)
-[Andres Chaux](https://github.com/andres192x)
-[Jessica Osorio](https://github.com/osorioj88) 
+*[Sabrina-Nawaz](https://github.com/Sabrina-Nawaz)
+*[Gareth Kwan](https://github.com/Gareth-Kwan)
+*[Jasper Cheng](https://github.com/Hpyorange)
+*[Andres Chaux](https://github.com/andres192x)
+*[Jessica Osorio](https://github.com/osorioj88) 
